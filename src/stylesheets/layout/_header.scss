@@ -1,0 +1,26 @@
+// _header.scss
+
+@use "../abstracts/mixins" as *;
+
+.header {
+  margin: 30px 24px 37px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  @include breakpoint-up(medium) {
+    margin: 140px auto 36px;
+    width: 74.609%;
+  }
+
+  @include breakpoint-up(large) {
+    margin: 144px auto 36px;
+    width: 50.694%;
+  }
+
+  &__title {
+    color: var(--text1);
+  }
+}

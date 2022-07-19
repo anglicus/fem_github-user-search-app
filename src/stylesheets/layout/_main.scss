@@ -1,0 +1,239 @@
+// _main.scss
+
+@use "../abstracts/mixins" as *;
+
+.main {
+  width: 87.2%;
+  margin: 0 auto 78px;
+
+  @include breakpoint-up(medium) {
+    width: 74.609%;
+    margin-bottom: 236px;
+  }
+
+  @include breakpoint-up(large) {
+    width: 50.694%;
+    margin-bottom: 144px;
+  }
+
+}
+
+.searchbar {
+  margin-bottom: 16px;
+  box-shadow: var(--shadow1);
+
+  @include breakpoint-up(medium) {
+    margin-bottom: 24px;
+  }
+}
+
+.user-card {
+  background-color: var(--background2);
+  border-radius: 15px;
+  padding: 32px 24px 48px;
+  color: var(--text2);
+  box-shadow: var(--shadow1);
+
+  @include breakpoint-up(medium) {
+    padding: 40px;
+  }
+
+  @include breakpoint-up(large) {
+    padding: 48px;
+  }
+
+  &__info-div {
+    display: grid;
+    grid-template-areas: "image name"
+                         "image id"
+                         "image joined"
+                         "bio bio";
+    grid-template-columns: min-content auto;
+    justify-items: start;
+    align-items: start;
+
+    @include breakpoint-up(large) {
+      grid-template-areas: "image name joined"
+                           "image id joined"
+                           "image bio bio";
+    }
+  }
+
+  &__user-image {
+    grid-area: image;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 19px;
+
+    @include breakpoint-up(medium) {
+      width: 117px;
+      height: 117px;
+      margin-right: 41px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-right: 38px;
+    }
+  }
+
+  &__user-name {
+    grid-area: name;
+    color: var(--text1);
+    
+    @include breakpoint-up(medium) {
+      margin-top: 15px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: -1px;
+    }
+  }
+
+  &__user-id-line {
+    grid-area: id;
+    color: var(--blue);
+    line-height: 0;
+    margin-top: 11px;
+
+    @include breakpoint-up(medium) {
+      font-size: 1rem;
+      margin-top: 7px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: 18px;
+    }
+  }
+
+  &__joined {
+    grid-area: joined;
+    margin-top: 12px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 4px;
+    }
+
+    @include breakpoint-up(large) {
+      justify-self: end;
+    }
+  }
+  
+  &__user-bio {
+    grid-area: bio;
+    margin-top: 30px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 24px;
+    }
+
+    @include breakpoint-up(large) {
+      margin-top: 32px;
+    }
+  }
+
+  &__stats-div {
+    background-color: var(--background1);
+    border-radius: 10px;
+    margin-top: 23px;
+    padding: 18px 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    justify-items: center;
+    color: var(--text1);
+
+    @include breakpoint-up(medium) {
+      margin-top: 32px;
+      padding: 14px 32px;
+      justify-items: start;
+      column-gap: 2%;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 155px;
+    }
+  }
+
+  &__stats-val {
+    margin-top: 8px;
+
+    @include breakpoint-up(medium) {
+      margin-top: 1px;
+    }
+  }
+
+  &__location-div {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 15px;
+    row-gap: 14px;
+    align-items: center;
+    justify-content: start;
+
+    & a, p {
+      color: var(--text1);
+    }
+
+    & > .transparency {
+      opacity: 0.5;
+    }
+
+    @include breakpoint-up(medium) {
+      margin-top: 32px;
+      grid-template-areas: "p-icon p-text t-icon t-text"
+                           "w-icon w-text c-icon c-text";
+      row-gap: 18px;
+      grid-template-columns: min-content 1.2fr min-content 1fr;
+    }
+
+    @include breakpoint-up(large) {
+      margin-left: 155px;
+      margin-top: 40px;
+      grid-template-columns: min-content 1.3fr min-content 1fr;
+    }
+  }
+
+  &__location-icon {
+    filter: var(--filter1);
+  }
+
+  @include breakpoint-up(medium) {
+
+    &__physical-icon {
+      grid-area: p-icon;
+    }
+
+    &__location-physical {
+      grid-area: p-text;
+    }
+
+    &__website-icon {
+      grid-area: w-icon;
+    }
+
+    &__location-website {
+      grid-area: w-text;
+    }
+
+    &__twitter-icon {
+      grid-area: t-icon;
+    }
+
+    &__location-twitter {
+      grid-area: t-text;
+    }
+
+    &__company-icon {
+      grid-area: c-icon;
+    }
+
+    &__location-company {
+      grid-area: c-text;
+    }
+  }
+
+}
+

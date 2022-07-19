@@ -1,0 +1,111 @@
+// _typography.scss
+
+@use "../abstracts/mixins" as *;
+
+
+html {
+  font-size: 100%;
+}
+
+// devfinder header 
+h1 {
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  // same on all sizes
+}
+
+// user name
+h2 {
+  font-size: 1rem;
+  line-height: 1.48125rem;
+  font-weight: 700;
+
+  @include breakpoint-up(medium) {
+    font-size: 1.625rem;
+    line-height: 2rem;
+    // same on large
+  }
+}
+
+// stat titles
+h3 {
+  font-size: 0.6875rem;
+  line-height: 1.0625rem;
+  font-weight: 400;
+
+  @include breakpoint-up(medium) {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    // same on large
+  }
+}
+
+// stats
+h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+
+  @include breakpoint-up(medium) {
+    font-size: 1.375rem;
+    line-height: 2.03625rem;
+    // same on large
+  }
+}
+
+p {
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  font-weight: 400;
+
+  @include breakpoint-up(medium) {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    // same on large
+  }
+}
+
+button {
+  font-size: 0.875rem;
+  line-height: 1.3125;
+  font-weight: 400;
+
+  @include breakpoint-up(medium) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    // same on large
+  }
+
+  &.mode-toggle {
+    font-size: 0.8125rem;
+    line-height: 1.1875rem;
+    letter-spacing: 0.15625rem;
+    font-weight: 700;
+
+    // same on all sizes
+  }
+}
+
+input {
+  font-size: 0.8125rem;
+  font-weight: 400;
+
+  @include breakpoint-up(medium) {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+  }
+}
+
+a {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-decoration: none;
+
+  @include breakpoint-up(medium) {
+    font-size: 0.9375rem;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

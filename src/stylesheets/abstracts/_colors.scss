@@ -1,0 +1,26 @@
+// _colors.scss
+
+// set color variables for light and dark color schemes
+:root.light {
+  --background1: hsl(227, 100%, 98%);
+  --background2: #FEFEFE;
+  --text1: hsl(217, 21%, 21%);
+  --text2: hsl(217, 35%, 45%);
+  --text3: hsl(217, 20%, 51%);
+  --blue: hsl(212, 100%, 50%);
+  --errorRed: #F74646;
+  --filter1: none;
+  --shadow1: 0 16px 30px -10px #4660BB20;
+}
+
+:root.dark {
+  --background1: hsl(220, 40%, 13%);
+  --background2: hsl(222, 41%, 20%);
+  --text1: white;
+  --text2: white;
+  --text3: white;
+  --blue: hsl(212, 100%, 50%);
+  --errorRed: #F74646;
+  --filter1: brightness(5); // for changing svg icons to white
+  --shadow1: none;
+}

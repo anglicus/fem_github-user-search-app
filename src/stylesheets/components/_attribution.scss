@@ -1,0 +1,16 @@
+// _attribution.scss
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  width: 75%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  font-size: 11px; 
+  text-align: center;
+  color: var(--text1);
+
+  & a {
+    color: var(--blue);
+  }
+}

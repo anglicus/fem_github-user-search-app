@@ -1,0 +1,37 @@
+// mode-toggle.scss
+
+.mode-toggle {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+
+  color: var(--text1);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  &.status-light {
+    
+    & > .light-element {
+      display: none;
+    }
+  }
+
+  &.status-dark {
+
+    & > .dark-element {
+      display: none;
+    }
+  }
+
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 14px;
+  }
+}

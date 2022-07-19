@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+  <header class="header">
+    
+    <h1 class="header__title">devfinder</h1>
+    <button class="header__toggle mode-toggle status-light">
+      <span class="mode-toggle__label light-element">Light</span>
+      <span class="mode-toggle__label dark-element">Dark</span>
+      <img src="./assets/icon-sun.svg" alt="sun icon" class="mode-toggle__icon light-element">
+      <img src="./assets/icon-moon.svg" alt="moon icon" class="mode-toggle__icon dark-element">
+    </button>
+  </header>
+  <main class="main">
+    <section class="searchbar">
+      <form action="" class="searchbar__form">
+        <img class="searchbar__icon" src="./assets/icon-search.svg" alt="search icon">
+        <input type="text" class="searchbar__input" placeholder="Search GitHub username&#8230;">
+        <p class="searchbar__error-msg"></p>
+        <button class="searchbar__button" type="submit">Search</button>
+      </form>
+    </section>
+    <section class="user-card">
+      <div class="user-card__info-div">
+        <img src="" alt="user image" class="user-card__user-image">
+        <h2 class="user-card__user-name"></h2>
+        <p class="user-card__joined">Joined <span class="user-card__joined-date"></span></p>
+        <p class="user-card__user-id-line">@<span class="user-card__user-id"></span></p>
+        <p class="user-card__user-bio"></p>
+      </div>
+      <div class="user-card__stats-div stats-div">
+        <h3 class="user-card__stats-title">Repos</h4>
+        <h4 class="user-card__stats-repos user-card__stats-val"></h3>
+        <h3 class="user-card__stats-title">Followers</h4>
+        <h4 class="user-card__stats-followers user-card__stats-val"></h3>
+        <h3 class="user-card__stats-title">Following</h4>
+        <h4 class="user-card__stats-following user-card__stats-val"></h3>
+      </div>
+      <div class="user-card__location-div location-div">
+        <img src="./assets/icon-location.svg" alt="location icon" class="user-card__location-icon user-card__physical-icon">
+        <p class="user-card__location-physical"></p>
+        <img src="./assets/icon-website.svg" alt="website link icon" class="user-card__location-icon user-card__website-icon">
+        <a class="user-card__location-website"></a>
+        <img src="./assets/icon-twitter.svg" alt="twitter icon" class="user-card__location-icon user-card__twitter-icon">
+        <a class="user-card__location-twitter"></a>
+        <img src="./assets/icon-company.svg" alt="company icon" class="user-card__location-icon user-card__company-icon">
+        <a class="user-card__location-company"></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      <br>Coded by <a href="https://www.frontendmentor.io/profile/anglicus">James English</a>.
+    </div>
+  </footer>
+</body>
+  <script type="module" src="./js/index.js"></script>
+</html>
